@@ -1,4 +1,3 @@
-// Simulación de usuario activo
 const usuario = {
   nombre: "Clou",
   dibujos: [
@@ -9,14 +8,14 @@ const usuario = {
   limite: 10
 };
 
-// Mostrar nombre en perfil
 document.addEventListener("DOMContentLoaded", () => {
+  document.body.classList.add("cargado");
+
   const perfil = document.getElementById("perfil");
   if (perfil) {
     perfil.innerHTML += `<p>Bienvenido, <strong>${usuario.nombre}</strong></p>`;
   }
 
-  // Cargar galería simulada
   const galeria = document.getElementById("galeria");
   if (galeria) {
     usuario.dibujos.forEach(dibujo => {
@@ -27,38 +26,4 @@ document.addEventListener("DOMContentLoaded", () => {
       card.dataset.privado = dibujo.privado;
 
       card.innerHTML = `
-        <h3>${dibujo.titulo}</h3>
-        <p>Categoría: ${dibujo.categoria}</p>
-        <p class="estado">${dibujo.privado ? "Privado" : "Público"}</p>
-        <button onclick="togglePrivacidad('${dibujo.id}')">Cambiar privacidad</button>
-      `;
-
-      galeria.appendChild(card);
-    });
-  }
-});
-
-// Filtrar por categoría
-function filtrarCategoria(categoria) {
-  const dibujos = document.querySelectorAll('.dibujo');
-  dibujos.forEach(d => {
-    d.style.display = d.dataset.categoria === categoria || categoria === "todos"
-      ? 'block'
-      : 'none';
-  });
-}
-
-// Cambiar privacidad
-function togglePrivacidad(id) {
-  const dibujo = document.getElementById(id);
-  if (dibujo) {
-    const estadoActual = dibujo.dataset.privado === "true";
-    dibujo.dataset.privado = (!estadoActual).toString();
-    dibujo.querySelector(".estado").textContent = estadoActual ? "Público" : "Privado";
-  }
-}
-
-// Animación de carga
-window.addEventListener("load", () => {
-  document.body.classList.add("cargado");
-});
+        <h3>${dibujo.titulo}</
