@@ -31,11 +31,11 @@
   <section id="explorar">
     <h2>Explorar dibujos</h2>
     <ul>
-      <li><a href="#">+18</a></li>
-      <li><a href="#">Diseño</a></li>
-      <li><a href="#">Paisajes</a></li>
-      <li><a href="#">Personajes</a></li>
-      <li><a href="#">Arte libre</a></li>
+      <li><a href="#" onclick="filtrarCategoria('+18')">+18</a></li>
+      <li><a href="#" onclick="filtrarCategoria('diseño')">Diseño</a></li>
+      <li><a href="#" onclick="filtrarCategoria('paisajes')">Paisajes</a></li>
+      <li><a href="#" onclick="filtrarCategoria('personajes')">Personajes</a></li>
+      <li><a href="#" onclick="filtrarCategoria('todos')">Todos</a></li>
     </ul>
   </section>
 
@@ -46,7 +46,12 @@
 
   <section id="perfil">
     <h2>Mi perfil</h2>
-    <p>Zona privada (próximamente): gestiona tus dibujos, privacidad y favoritos.</p>
+    <!-- Aquí se mostrará el nombre del usuario -->
+  </section>
+
+  <section id="galeria">
+    <h2>Mis dibujos</h2>
+    <!-- Aquí se insertan las tarjetas dinámicamente -->
   </section>
 
   <section id="planes">
@@ -62,5 +67,6 @@
     <p>&copy; 2025 Elaria. Creado por Clou Universe.</p>
   </footer>
 
+  <script src="script.js"></script>
 </body>
 </html>
