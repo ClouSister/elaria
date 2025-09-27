@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Elaria</title>
-  <link rel="stylesheet" href="estilos.css">
+  <link rel="stylesheet" href="estilos.css" />
 </head>
 <body>
-
   <header>
     <h1>Elaria</h1>
     <p>Donde el arte se libera</p>
@@ -30,13 +29,13 @@
 
   <section id="explorar">
     <h2>Explorar dibujos</h2>
-    <ul>
-      <li><a href="#" onclick="filtrarCategoria('+18')">+18</a></li>
-      <li><a href="#" onclick="filtrarCategoria('diseño')">Diseño</a></li>
-      <li><a href="#" onclick="filtrarCategoria('paisajes')">Paisajes</a></li>
-      <li><a href="#" onclick="filtrarCategoria('personajes')">Personajes</a></li>
-      <li><a href="#" onclick="filtrarCategoria('todos')">Todos</a></li>
-    </ul>
+    <div class="categorias">
+      <button onclick="filtrarCategoria('+18')">+18</button>
+      <button onclick="filtrarCategoria('diseño')">Diseño</button>
+      <button onclick="filtrarCategoria('paisajes')">Paisajes</button>
+      <button onclick="filtrarCategoria('personajes')">Personajes</button>
+      <button onclick="filtrarCategoria('todos')">Todos</button>
+    </div>
   </section>
 
   <section id="subir">
@@ -46,12 +45,11 @@
 
   <section id="perfil">
     <h2>Mi perfil</h2>
-    <!-- Aquí se mostrará el nombre del usuario -->
   </section>
 
   <section id="galeria">
     <h2>Mis dibujos</h2>
-    <!-- Aquí se insertan las tarjetas dinámicamente -->
+    <!-- Tarjetas dinámicas se insertan aquí -->
   </section>
 
   <section id="planes">
