@@ -1,0 +1,150 @@
+/* Tipografías elegantes */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Inter:wght@400;600&display=swap');
+
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #0e0e0e;
+  color: #f0f0f0;
+  line-height: 1.6;
+  transition: background-color 0.3s ease;
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+body.cargado {
+  opacity: 1;
+}
+
+/* Encabezado */
+header {
+  background: linear-gradient(135deg, #1c1c1c, #2a2a2a);
+  padding: 40px 20px;
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+  color: #e0e0e0;
+}
+
+header h1 {
+  font-size: 3em;
+  margin-bottom: 10px;
+}
+
+header p {
+  font-size: 1.2em;
+  color: #ccc;
+}
+
+/* Navegación */
+nav {
+  background-color: #1a1a1a;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+nav ul li a {
+  color: #ccc;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #ffd6a5;
+}
+
+/* Secciones */
+section {
+  padding: 40px 20px;
+  max-width: 900px;
+  margin: auto;
+  animation: fadeIn 0.8s ease;
+}
+
+section h2 {
+  font-size: 2em;
+  margin-bottom: 15px;
+  color: #ffd6a5;
+}
+
+section p, section ul {
+  font-size: 1em;
+  color: #ddd;
+}
+
+section ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+section ul li {
+  margin: 10px 0;
+}
+
+/* Galería de categorías */
+#explorar ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+
+#explorar ul li a {
+  background-color: #222;
+  padding: 10px 20px;
+  border-radius: 8px;
+  color: #ffd6a5;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+#explorar ul li a:hover {
+  background-color: #333;
+}
+
+/* Pie de página */
+footer {
+  background-color: #000;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9em;
+  color: #888;
+}
+
+/* Animación de entrada */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 2.2em;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  section {
+    padding: 30px 15px;
+  }
+}
